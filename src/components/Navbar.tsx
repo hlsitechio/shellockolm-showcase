@@ -1,6 +1,7 @@
-import { Search, Github, Menu, X } from "lucide-react";
+import { Github, Menu, X, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import shellockolmLogo from "@/assets/shellockolm-logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,7 +39,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <Search className="w-6 h-6 text-primary" />
+            <img src={shellockolmLogo} alt="Shellockolm" className="w-8 h-8 object-contain" />
             <span className="font-display text-xl font-bold text-gradient-gold">
               Shellockolm
             </span>
@@ -58,7 +59,16 @@ const Navbar = () => {
           </div>
 
           {/* CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3">
+            <Button
+              variant="outline"
+              size="sm"
+              className="border-primary/50 hover:bg-primary/10 text-primary hover:text-primary"
+              onClick={() => window.open("https://github.com/hlsitechio/shellockolm/stargazers", "_blank")}
+            >
+              <Star className="w-4 h-4 mr-2" />
+              Star
+            </Button>
             <Button
               variant="outline"
               size="sm"
@@ -96,6 +106,15 @@ const Navbar = () => {
                   {link.label}
                 </button>
               ))}
+              <Button
+                variant="outline"
+                size="sm"
+                className="border-primary/50 hover:bg-primary/10 text-primary hover:text-primary w-full mt-2"
+                onClick={() => window.open("https://github.com/hlsitechio/shellockolm/stargazers", "_blank")}
+              >
+                <Star className="w-4 h-4 mr-2" />
+                Star on GitHub
+              </Button>
               <Button
                 variant="outline"
                 size="sm"
