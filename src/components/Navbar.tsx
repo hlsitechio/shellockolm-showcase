@@ -63,11 +63,12 @@ const Navbar = () => {
             <Button
               variant="outline"
               size="sm"
-              className="border-primary/50 hover:bg-primary/10 text-primary hover:text-primary"
-              onClick={() => window.open("https://github.com/hlsitechio/shellockolm/stargazers", "_blank")}
+              className="border-primary/50 hover:bg-primary/10 text-primary hover:text-primary gap-2"
+              onClick={() => window.open("https://github.com/hlsitechio/shellockolm", "_blank")}
             >
-              <Star className="w-4 h-4 mr-2" />
+              <Star className="w-4 h-4 fill-primary" />
               Star
+              <span className="ml-1 px-1.5 py-0.5 text-xs bg-primary/20 rounded-md">1</span>
             </Button>
             <Button
               variant="outline"
@@ -109,11 +110,12 @@ const Navbar = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="border-primary/50 hover:bg-primary/10 text-primary hover:text-primary w-full mt-2"
-                onClick={() => window.open("https://github.com/hlsitechio/shellockolm/stargazers", "_blank")}
+                className="border-primary/50 hover:bg-primary/10 text-primary hover:text-primary w-full mt-2 gap-2"
+                onClick={() => window.open("https://github.com/hlsitechio/shellockolm", "_blank")}
               >
-                <Star className="w-4 h-4 mr-2" />
-                Star on GitHub
+                <Star className="w-4 h-4 fill-primary" />
+                Star
+                <span className="ml-1 px-1.5 py-0.5 text-xs bg-primary/20 rounded-md">1</span>
               </Button>
               <Button
                 variant="outline"
