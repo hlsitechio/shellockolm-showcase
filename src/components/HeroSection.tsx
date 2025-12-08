@@ -7,20 +7,28 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-dark" />
+      {/* Ultramarine glow from top */}
       <div 
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-40"
         style={{
-          backgroundImage: `radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--gold) / 0.15), transparent)`,
+          backgroundImage: `radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--ultramarine) / 0.2), transparent)`,
+        }}
+      />
+      {/* Subtle gold gaslight accent */}
+      <div 
+        className="absolute inset-0 opacity-15"
+        style={{
+          backgroundImage: `radial-gradient(ellipse 40% 30% at 80% 80%, hsl(var(--gold) / 0.3), transparent)`,
         }}
       />
       
 
-      {/* Grid pattern overlay */}
+      {/* Grid pattern overlay - ultramarine */}
       <div 
         className="absolute inset-0 opacity-5"
         style={{
-          backgroundImage: `linear-gradient(hsl(var(--gold)) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(var(--gold)) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(hsl(var(--ultramarine)) 1px, transparent 1px),
+                           linear-gradient(90deg, hsl(var(--ultramarine)) 1px, transparent 1px)`,
           backgroundSize: '50px 50px',
         }}
       />
@@ -30,11 +38,11 @@ const HeroSection = () => {
           {/* Left side - Logo */}
           <div className="animate-fade-up flex justify-center lg:justify-start">
             <div className="relative">
-              {/* Glow effect behind logo */}
+              {/* Glow effect behind logo - ultramarine */}
               <div 
-                className="absolute inset-0 blur-3xl opacity-30"
+                className="absolute inset-0 blur-3xl opacity-40"
                 style={{
-                  background: `radial-gradient(circle, hsl(var(--gold) / 0.4), transparent 70%)`,
+                  background: `radial-gradient(circle, hsl(var(--ultramarine) / 0.5), transparent 70%)`,
                 }}
               />
               <img 
@@ -57,7 +65,7 @@ const HeroSection = () => {
 
             {/* Main headline */}
             <h1 className="animate-fade-up-delay-1 font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 leading-tight">
-              <span className="text-gradient-gold glow-text">Shellockolm</span>
+              <span className="text-gradient-ultramarine glow-text">Shellockolm</span>
             </h1>
 
             <p className="animate-fade-up-delay-2 font-display text-xl md:text-2xl text-foreground/90 mb-4 italic">
@@ -73,7 +81,7 @@ const HeroSection = () => {
             <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="group relative overflow-hidden bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg font-semibold glow-gold animate-glow-pulse"
+                className="group relative overflow-hidden bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg font-semibold glow-ultramarine animate-glow-pulse"
                 onClick={() => window.open('https://github.com/hlsitechio/shellockolm', '_blank')}
               >
                 <Shield className="w-5 h-5 mr-2" />

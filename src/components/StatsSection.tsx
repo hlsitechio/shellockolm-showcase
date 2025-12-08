@@ -8,12 +8,12 @@ const stats = [
 const StatsSection = () => {
   return (
     <section className="relative py-24 overflow-hidden">
-      {/* Background with glow effect */}
+      {/* Background with ultramarine glow effect */}
       <div className="absolute inset-0 bg-navy" />
       <div 
         className="absolute inset-0"
         style={{
-          backgroundImage: `radial-gradient(ellipse 100% 100% at 50% 0%, hsl(var(--gold) / 0.08), transparent 50%)`,
+          backgroundImage: `radial-gradient(ellipse 100% 100% at 50% 0%, hsl(var(--ultramarine) / 0.1), transparent 50%)`,
         }}
       />
 
@@ -25,7 +25,7 @@ const StatsSection = () => {
               className="text-center group"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="stat-number text-gradient-gold mb-2 group-hover:glow-text transition-all">
+              <div className="stat-number text-gradient-ultramarine mb-2 group-hover:glow-text transition-all">
                 {stat.value}
               </div>
               <div className="text-foreground font-medium mb-1">{stat.label}</div>

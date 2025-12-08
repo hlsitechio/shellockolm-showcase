@@ -23,65 +23,77 @@
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
-    --foreground: 45 30% 95%;
+    /* Victorian London Fog & Ultramarine theme */
+    --background: 225 30% 6%;
+    --foreground: 220 20% 92%;
 
-    --card: 222 47% 10%;
-    --card-foreground: 45 30% 95%;
+    --card: 225 30% 10%;
+    --card-foreground: 220 20% 92%;
 
-    --popover: 222 47% 10%;
-    --popover-foreground: 45 30% 95%;
+    --popover: 225 30% 10%;
+    --popover-foreground: 220 20% 92%;
 
-    --primary: 45 93% 58%;
-    --primary-foreground: 222 47% 6%;
+    /* Ultramarine Blue - Sherlock's favorite */
+    --primary: 228 78% 50%;
+    --primary-foreground: 220 20% 98%;
 
-    --secondary: 222 30% 18%;
-    --secondary-foreground: 45 30% 95%;
+    --secondary: 225 25% 16%;
+    --secondary-foreground: 220 20% 92%;
 
-    --muted: 222 30% 15%;
+    --muted: 225 20% 14%;
     --muted-foreground: 220 15% 55%;
 
-    --accent: 45 93% 58%;
-    --accent-foreground: 222 47% 6%;
+    /* Gold accent for warmth - gaslight glow */
+    --accent: 45 85% 55%;
+    --accent-foreground: 225 30% 6%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 45 30% 95%;
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 220 20% 98%;
 
-    --border: 222 30% 20%;
-    --input: 222 30% 18%;
-    --ring: 45 93% 58%;
+    --border: 225 25% 20%;
+    --input: 225 25% 16%;
+    --ring: 228 78% 50%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --gold: 45 93% 58%;
-    --gold-glow: 45 100% 70%;
-    --midnight: 222 47% 6%;
-    --navy: 222 47% 12%;
+    /* Custom tokens - Sherlock palette */
+    --ultramarine: 228 78% 50%;
+    --ultramarine-glow: 228 85% 65%;
+    --ultramarine-deep: 228 78% 35%;
+    --gold: 45 85% 55%;
+    --gold-glow: 45 90% 65%;
+    --midnight: 225 30% 6%;
+    --fog: 220 15% 75%;
+    --silver: 220 10% 65%;
+    --navy: 225 35% 12%;
     --steel: 220 15% 55%;
-    --cyan: 185 80% 50%;
-    --danger: 0 84% 60%;
-    --success: 142 70% 45%;
+    --gaslight: 38 80% 50%;
+    --danger: 0 72% 55%;
+    --success: 145 65% 42%;
+    --cyan: 195 75% 50%;
 
-    /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(45, 93%, 58%), hsl(35, 100%, 50%));
-    --gradient-dark: linear-gradient(180deg, hsl(222, 47%, 8%), hsl(222, 47%, 4%));
-    --gradient-card: linear-gradient(145deg, hsl(222, 47%, 12%), hsl(222, 47%, 8%));
-    --gradient-glow: radial-gradient(ellipse at center, hsl(45, 93%, 58%, 0.15), transparent 70%);
+    /* Gradients - Victorian fog meets electric blue */
+    --gradient-ultramarine: linear-gradient(135deg, hsl(228, 78%, 50%), hsl(228, 85%, 65%));
+    --gradient-gold: linear-gradient(135deg, hsl(45, 85%, 55%), hsl(38, 80%, 50%));
+    --gradient-dark: linear-gradient(180deg, hsl(225, 30%, 8%), hsl(225, 30%, 4%));
+    --gradient-card: linear-gradient(145deg, hsl(225, 30%, 12%), hsl(225, 30%, 8%));
+    --gradient-fog: linear-gradient(180deg, hsl(220, 15%, 75%, 0.05), transparent);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(228, 78%, 50%, 0.15), transparent 70%);
 
-    /* Shadows */
-    --shadow-gold: 0 0 40px hsl(45, 93%, 58%, 0.25);
-    --shadow-card: 0 25px 50px -12px hsl(0, 0%, 0%, 0.5);
-    --shadow-glow: 0 0 60px hsl(45, 93%, 58%, 0.2);
+    /* Shadows - gaslight in London fog */
+    --shadow-ultramarine: 0 0 40px hsl(228, 78%, 50%, 0.3);
+    --shadow-gold: 0 0 40px hsl(45, 85%, 55%, 0.25);
+    --shadow-card: 0 25px 50px -12px hsl(0, 0%, 0%, 0.6);
+    --shadow-glow: 0 0 60px hsl(228, 78%, 50%, 0.2);
 
-    --sidebar-background: 222 47% 8%;
-    --sidebar-foreground: 45 30% 95%;
-    --sidebar-primary: 45 93% 58%;
-    --sidebar-primary-foreground: 222 47% 6%;
-    --sidebar-accent: 222 30% 15%;
-    --sidebar-accent-foreground: 45 30% 95%;
-    --sidebar-border: 222 30% 20%;
-    --sidebar-ring: 45 93% 58%;
+    --sidebar-background: 225 30% 8%;
+    --sidebar-foreground: 220 20% 92%;
+    --sidebar-primary: 228 78% 50%;
+    --sidebar-primary-foreground: 220 20% 98%;
+    --sidebar-accent: 225 25% 15%;
+    --sidebar-accent-foreground: 220 20% 92%;
+    --sidebar-border: 225 25% 20%;
+    --sidebar-ring: 228 78% 50%;
   }
 }
 
@@ -110,6 +122,11 @@
     background-image: var(--gradient-gold);
   }
 
+  .text-gradient-ultramarine {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-ultramarine);
+  }
+
   .bg-gradient-dark {
     background: var(--gradient-dark);
   }
@@ -122,7 +139,15 @@
     box-shadow: var(--shadow-gold);
   }
 
+  .glow-ultramarine {
+    box-shadow: var(--shadow-ultramarine);
+  }
+
   .glow-text {
+    text-shadow: 0 0 30px hsl(var(--ultramarine) / 0.6);
+  }
+
+  .glow-text-gold {
     text-shadow: 0 0 30px hsl(var(--gold) / 0.5);
   }
 
@@ -144,13 +169,13 @@
 
   .terminal-window {
     @apply rounded-xl border border-border overflow-hidden;
-    background: hsl(222, 50%, 4%);
+    background: hsl(225, 35%, 4%);
     box-shadow: var(--shadow-card);
   }
 
   .terminal-header {
     @apply flex items-center gap-2 px-4 py-3 border-b border-border;
-    background: hsl(222, 47%, 8%);
+    background: hsl(225, 30%, 8%);
   }
 
   .terminal-dot {
@@ -162,6 +187,13 @@
   }
 
   .badge-detective {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium;
+    background: hsl(var(--ultramarine) / 0.15);
+    color: hsl(var(--ultramarine-glow));
+    border: 1px solid hsl(var(--ultramarine) / 0.3);
+  }
+
+  .badge-gold {
     @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium;
     background: hsl(var(--gold) / 0.1);
     color: hsl(var(--gold));
@@ -175,7 +207,7 @@
 
   .scan-line {
     @apply absolute left-0 right-0 h-px;
-    background: linear-gradient(90deg, transparent, hsl(var(--gold)), transparent);
+    background: linear-gradient(90deg, transparent, hsl(var(--ultramarine)), transparent);
     animation: scan 3s ease-in-out infinite;
   }
 }
@@ -222,10 +254,10 @@
 
 @keyframes glowPulse {
   0%, 100% {
-    box-shadow: 0 0 20px hsl(var(--gold) / 0.3);
+    box-shadow: 0 0 20px hsl(var(--ultramarine) / 0.4);
   }
   50% {
-    box-shadow: 0 0 40px hsl(var(--gold) / 0.5);
+    box-shadow: 0 0 50px hsl(var(--ultramarine) / 0.6);
   }
 }
 
