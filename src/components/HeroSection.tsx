@@ -99,7 +99,7 @@ const HeroSection = () => {
         </div>
 
         {/* Terminal preview - full width below */}
-        <div className="animate-fade-up-delay-3 max-w-4xl mx-auto mt-16 lg:mt-24">
+        <div className="animate-fade-up-delay-3 max-w-4xl mx-auto mt-32 lg:mt-40">
           <div className="terminal-window">
             <div className="terminal-header">
               <div className="terminal-dot bg-danger" />
