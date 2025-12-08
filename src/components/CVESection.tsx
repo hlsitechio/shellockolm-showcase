@@ -63,7 +63,7 @@ const CVESection = () => {
             Vulnerability Database
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-gradient-gold">CVEs</span> We Detect
+            <span className="text-gradient-ultramarine">CVEs</span> We Detect
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Comprehensive detection for critical vulnerabilities affecting React, Next.js, and npm ecosystems.

@@ -139,9 +139,9 @@ const FeaturesSection = () => {
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-dark" />
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-25"
         style={{
-          backgroundImage: `radial-gradient(ellipse 60% 40% at 50% 50%, hsl(var(--gold) / 0.1), transparent)`,
+          backgroundImage: `radial-gradient(ellipse 60% 40% at 50% 50%, hsl(var(--ultramarine) / 0.15), transparent)`,
         }}
       />
 
@@ -153,7 +153,7 @@ const FeaturesSection = () => {
             Capabilities
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-gradient-gold">Detective</span> Tools
+            <span className="text-gradient-ultramarine">Detective</span> Tools
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Everything you need to investigate and eliminate security vulnerabilities 

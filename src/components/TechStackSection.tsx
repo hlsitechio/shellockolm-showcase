@@ -92,9 +92,9 @@ const TechStackSection = () => {
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-dark" />
       <div 
-        className="absolute inset-0 opacity-15"
+        className="absolute inset-0 opacity-20"
         style={{
-          backgroundImage: `radial-gradient(ellipse 60% 50% at 80% 50%, hsl(var(--cyan) / 0.2), transparent)`,
+          backgroundImage: `radial-gradient(ellipse 60% 50% at 80% 50%, hsl(var(--ultramarine) / 0.2), transparent)`,
         }}
       />
 
@@ -106,7 +106,7 @@ const TechStackSection = () => {
             Ecosystem
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-gradient-gold">Tech Stack</span> Coverage
+            <span className="text-gradient-ultramarine">Tech Stack</span> Coverage
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Comprehensive security scanning across your entire JavaScript and Node.js ecosystem.
@@ -162,7 +162,7 @@ const TechStackSection = () => {
         {/* Tools Section */}
         <div className="mb-20">
           <h3 className="font-display text-2xl font-bold text-center mb-8">
-            <span className="text-gradient-gold">Tools</span> Included
+            <span className="text-gradient-ultramarine">Tools</span> Included
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {tools.map((tool) => (
@@ -182,7 +182,7 @@ const TechStackSection = () => {
         {/* Use Cases */}
         <div>
           <h3 className="font-display text-2xl font-bold text-center mb-8">
-            <span className="text-gradient-gold">Use</span> Cases
+            <span className="text-gradient-ultramarine">Use</span> Cases
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase) => (
