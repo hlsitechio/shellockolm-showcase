@@ -1,9 +1,10 @@
-import { Search, Shield, Zap } from "lucide-react";
+import { Shield, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import shellockolmLogo from "@/assets/shellockolm-logo.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-dark" />
       <div 
@@ -30,52 +31,75 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 container mx-auto px-6 text-center">
-        {/* Badge */}
-        <div className="animate-fade-up mb-8">
-          <span className="badge-detective">
-            <Search className="w-4 h-4" />
-            Security Detective for React & Next.js
-          </span>
+      <div className="relative z-10 container mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left side - Logo */}
+          <div className="animate-fade-up flex justify-center lg:justify-start">
+            <div className="relative">
+              {/* Glow effect behind logo */}
+              <div 
+                className="absolute inset-0 blur-3xl opacity-30"
+                style={{
+                  background: `radial-gradient(circle, hsl(var(--gold) / 0.4), transparent 70%)`,
+                }}
+              />
+              <img 
+                src={shellockolmLogo} 
+                alt="Shellockolm - Security Detective Logo" 
+                className="relative z-10 w-full max-w-md lg:max-w-lg xl:max-w-xl animate-float"
+              />
+            </div>
+          </div>
+
+          {/* Right side - Text Content */}
+          <div className="text-center lg:text-left">
+            {/* Badge */}
+            <div className="animate-fade-up-delay-1 mb-6">
+              <span className="badge-detective">
+                <Shield className="w-4 h-4" />
+                Security Detective for React & Next.js
+              </span>
+            </div>
+
+            {/* Main headline */}
+            <h1 className="animate-fade-up-delay-1 font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 leading-tight">
+              <span className="text-gradient-gold glow-text">Shellockolm</span>
+            </h1>
+
+            <p className="animate-fade-up-delay-2 font-display text-xl md:text-2xl text-foreground/90 mb-4 italic">
+              "Elementary, my dear developer!"
+            </p>
+
+            <p className="animate-fade-up-delay-2 text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8">
+              Your security detective that detects CVE-2025-55182, CVE-2025-66478, malware, 
+              and supply chain attacks. Elementary security for complex codebases.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button 
+                size="lg" 
+                className="group relative overflow-hidden bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg font-semibold glow-gold animate-glow-pulse"
+                onClick={() => window.open('https://github.com/hlsitechio/shellockolm', '_blank')}
+              >
+                <Shield className="w-5 h-5 mr-2" />
+                Get Started
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-border hover:bg-secondary hover:border-primary/50 px-8 py-6 text-lg"
+                onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                <Zap className="w-5 h-5 mr-2" />
+                See Features
+              </Button>
+            </div>
+          </div>
         </div>
 
-        {/* Main headline */}
-        <h1 className="animate-fade-up-delay-1 font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-          <span className="text-gradient-gold glow-text">Shellockolm</span>
-        </h1>
-
-        <p className="animate-fade-up-delay-2 font-display text-2xl md:text-3xl text-foreground/90 mb-4 italic">
-          "Elementary, my dear developer!"
-        </p>
-
-        <p className="animate-fade-up-delay-2 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
-          Your security detective that detects CVE-2025-55182, CVE-2025-66478, malware, 
-          and supply chain attacks. Elementary security for complex codebases.
-        </p>
-
-        {/* CTA Buttons */}
-        <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <Button 
-            size="lg" 
-            className="group relative overflow-hidden bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg font-semibold glow-gold animate-glow-pulse"
-            onClick={() => window.open('https://github.com/hlsitechio/shellockolm', '_blank')}
-          >
-            <Shield className="w-5 h-5 mr-2" />
-            Get Started
-          </Button>
-          <Button 
-            size="lg" 
-            variant="outline"
-            className="border-border hover:bg-secondary hover:border-primary/50 px-8 py-6 text-lg"
-            onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            <Zap className="w-5 h-5 mr-2" />
-            See Features
-          </Button>
-        </div>
-
-        {/* Terminal preview */}
-        <div className="animate-fade-up-delay-3 max-w-3xl mx-auto">
+        {/* Terminal preview - full width below */}
+        <div className="animate-fade-up-delay-3 max-w-4xl mx-auto mt-16 lg:mt-24">
           <div className="terminal-window">
             <div className="terminal-header">
               <div className="terminal-dot bg-danger" />
