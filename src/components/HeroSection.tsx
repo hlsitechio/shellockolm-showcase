@@ -14,12 +14,6 @@ const HeroSection = () => {
         }}
       />
       
-      {/* Animated scan lines */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="scan-line top-1/4" style={{ animationDelay: '0s' }} />
-        <div className="scan-line top-1/2" style={{ animationDelay: '1s' }} />
-        <div className="scan-line top-3/4" style={{ animationDelay: '2s' }} />
-      </div>
 
       {/* Grid pattern overlay */}
       <div 
@@ -98,8 +92,13 @@ const HeroSection = () => {
           </div>
         </div>
 
+        {/* Decorative divider line */}
+        <div className="my-20 lg:my-28 flex items-center justify-center">
+          <div className="h-px w-full max-w-4xl bg-gradient-to-r from-transparent via-primary to-transparent" />
+        </div>
+
         {/* Terminal preview - full width below */}
-        <div className="animate-fade-up-delay-3 max-w-4xl mx-auto mt-32 lg:mt-40">
+        <div className="animate-fade-up-delay-3 max-w-4xl mx-auto">
           <div className="terminal-window">
             <div className="terminal-header">
               <div className="terminal-dot bg-danger" />
