@@ -45,9 +45,9 @@ const cveData = [
 
 const malwareData = {
   campaign: "Shai Hulud",
-  packages: ["@postman/security-helpers", "@posthog/plugin-geoip", "@asyncapi/openapi-schema-parser", "@ensdomains/content-hash", "@zapier/secret-scrubber"],
+  packages: ["@postman/*", "@posthog/*", "@asyncapi/*", "@ensdomains/*", "@zapier/*"],
   indicators: ["bun_environment.js", "setup_bun.js", "trufflehog", ".truffler-cache", "cloud.json"],
-  total: "7,106+",
+  total: "16+ Indicators",
 };
 
 const ecosystem = [
@@ -60,6 +60,7 @@ const ecosystem = [
 ];
 
 const tools = [
+  { name: "gui.py", purpose: "Beautiful dark-themed GUI interface", primary: true },
   { name: "auto_fix.py", purpose: "Scan → Detect → Patch → Verify", primary: true },
   { name: "github_scanner.py", purpose: "GitHub repo scanning (no cloning)", primary: true },
   { name: "malware_scanner.py", purpose: "npm malware & supply chain attacks", primary: false },
@@ -176,7 +177,7 @@ const CoverageSection = () => {
                     </div>
                     <div>
                       <h3 className="font-display text-lg font-bold">npm Malware Detection</h3>
-                      <p className="text-xs text-muted-foreground">{malwareData.total} malicious packages tracked</p>
+                      <p className="text-xs text-muted-foreground">{malwareData.total} tracked</p>
                     </div>
                   </div>
                   <span className="px-3 py-1 rounded-full text-xs font-mono bg-primary/10 text-primary border border-primary/20">

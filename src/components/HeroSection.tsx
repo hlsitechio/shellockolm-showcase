@@ -115,14 +115,14 @@ const HeroSection = () => {
               <span className="ml-4 text-sm text-muted-foreground font-mono">terminal</span>
             </div>
             <div className="terminal-body text-left">
-              <p className="text-muted-foreground">$ pip install shellockolm</p>
-              <p className="text-success mt-2">✓ Successfully installed shellockolm</p>
-              <p className="text-muted-foreground mt-4">$ python src/auto_fix.py ~/projects</p>
-              <p className="text-primary mt-2">🔍 Scanning 2,665 projects...</p>
-              <p className="text-foreground mt-1">   → Found 19 critical CVEs</p>
-              <p className="text-foreground">   → 0 malware packages detected</p>
-              <p className="text-success mt-2">✓ Patched with 100% success rate</p>
-              <p className="text-muted-foreground mt-1">   Time: 12 seconds</p>
+              <p className="text-muted-foreground">$ git clone https://github.com/hlsitechio/shellockolm.git</p>
+              <p className="text-success mt-2">✓ Cloning into 'shellockolm'...</p>
+              <p className="text-muted-foreground mt-4">$ python src/scan.py ~/projects</p>
+              <p className="text-primary mt-2">🔍 Scanning projects...</p>
+              <p className="text-foreground mt-1">   → React 19.0.0 vulnerable (CVE-2025-55182)</p>
+              <p className="text-foreground">   → Next.js 15.0.0 vulnerable (CVE-2025-66478)</p>
+              <p className="text-success mt-2">✓ Scan complete</p>
+              <p className="text-muted-foreground mt-1">   Elementary, my dear developer!</p>
             </div>
           </div>
         </div>

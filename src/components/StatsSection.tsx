@@ -1,8 +1,8 @@
 const stats = [
-  { value: "2,688", label: "Projects Scanned", sublabel: "local + GitHub" },
-  { value: "12s", label: "Scan Time", sublabel: "for local projects" },
-  { value: "100%", label: "Patch Rate", sublabel: "success rate" },
-  { value: "7,106+", label: "npm Packages", sublabel: "analyzed" },
+  { value: "Fast", label: "Local Scanning", sublabel: "seconds not minutes" },
+  { value: "100%", label: "Coverage", sublabel: "all lockfiles scanned" },
+  { value: "Auto", label: "Patching", sublabel: "one-click fixes" },
+  { value: "16+", label: "Malware Types", sublabel: "indicators tracked" },
 ];
 
 const StatsSection = () => {
