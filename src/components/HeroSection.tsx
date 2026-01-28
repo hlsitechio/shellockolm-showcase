@@ -59,7 +59,7 @@ const HeroSection = () => {
             <div className="animate-fade-up-delay-1 mb-6">
               <span className="badge-detective">
                 <Shield className="w-4 h-4" />
-                Security Detective for React & Next.js
+                60+ Commands. Zero Config.
               </span>
             </div>
 
@@ -73,8 +73,7 @@ const HeroSection = () => {
             </p>
 
             <p className="animate-fade-up-delay-2 text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8">
-              Your security detective that detects CVE-2025-55182, CVE-2025-66478, malware, 
-              and supply chain attacks. Elementary security for complex codebases.
+              Security scanner for React, Next.js, Node.js, and npm. 32 CVEs. 60+ commands. Zero config.
             </p>
 
             {/* CTA Buttons */}
@@ -115,14 +114,12 @@ const HeroSection = () => {
               <span className="ml-4 text-sm text-muted-foreground font-mono">terminal</span>
             </div>
             <div className="terminal-body text-left">
-              <p className="text-muted-foreground">$ git clone https://github.com/hlsitechio/shellockolm.git</p>
-              <p className="text-success mt-2">✓ Cloning into 'shellockolm'...</p>
-              <p className="text-muted-foreground mt-4">$ python src/scan.py ~/projects</p>
-              <p className="text-primary mt-2">🔍 Scanning projects...</p>
-              <p className="text-foreground mt-1">   → React 19.0.0 vulnerable (CVE-2025-55182)</p>
-              <p className="text-foreground">   → Next.js 15.0.0 vulnerable (CVE-2025-66478)</p>
-              <p className="text-success mt-2">✓ Scan complete</p>
-              <p className="text-muted-foreground mt-1">   Elementary, my dear developer!</p>
+              <p className="text-muted-foreground">$ python src/auto_fix.py ~/projects</p>
+              <p className="text-primary mt-2">🔍 Scanning 32 CVEs across 7 scanners...</p>
+              <p className="text-foreground mt-1">   → React 19.0.0 → CVE-2025-55182 (CVSS 10.0)</p>
+              <p className="text-foreground">   → Next.js 15.0.0 → CVE-2025-66478 (CVSS 10.0)</p>
+              <p className="text-foreground">   → n8n 1.76.1 → CVE-2026-21858 (Ni8mare RCE)</p>
+              <p className="text-success mt-2">✓ All vulnerabilities patched. Elementary!</p>
             </div>
           </div>
         </div>
