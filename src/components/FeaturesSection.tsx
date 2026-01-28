@@ -1,13 +1,10 @@
 import {
   Search,
   Shield,
-  Zap,
   Github,
   Bot,
   Lock,
   FileCode,
-  AlertTriangle,
-  Monitor
 } from "lucide-react";
 import FlipCard from "./FlipCard";
 
@@ -15,142 +12,97 @@ const features = [
   {
     icon: Search,
     title: "CVE Detection",
-    description: "Detects critical vulnerabilities including CVE-2025-55182 and CVE-2025-66478 with CVSS 10.0 severity.",
-    highlight: "CVSS 10.0",
+    description: "Detects 32 CVEs including critical RCEs in React, Next.js, Node.js, and n8n.",
+    highlight: "32 CVEs",
     terminalLines: [
       "$ python src/scan.py ./project",
-      "🔍 Scanning dependencies...",
-      "→ Checking package.json & lockfiles",
-      "→ Found react@19.0.0 (vulnerable)",
-      "⚠ CVE-2025-55182 found in react@19.0.0",
-      "⚠ Severity: CRITICAL (CVSS 10.0)",
-      "✓ Remediation: Upgrade to react@19.0.1",
+      "🔍 Scanning 7 specialized scanners...",
+      "→ React: CVE-2025-55182 (CVSS 10.0)",
+      "→ Next.js: CVE-2025-66478 (CVSS 10.0)",
+      "→ n8n: CVE-2026-21858 (Ni8mare RCE)",
+      "→ Node.js: 9 runtime vulnerabilities",
+      "✓ 32 CVEs tracked",
     ],
   },
   {
     icon: Shield,
     title: "Auto-Patching",
-    description: "Automatic remediation with scan → detect → patch → verify workflow. 100% patch success rate.",
-    highlight: "100% Success",
+    description: "Scan, detect, patch, verify. One command fixes everything.",
+    highlight: "One Command",
     terminalLines: [
       "$ python src/auto_fix.py ~/projects",
-      "🔍 Scanning projects...",
-      "→ Found vulnerable packages",
+      "🔍 Scanning...",
+      "→ Found 3 vulnerable packages",
       "→ Patching react: 19.0.0 → 19.0.1",
       "→ Patching next: 15.0.0 → 15.0.5",
-      "✓ All vulnerabilities patched",
-      "✓ Backed up package.json",
+      "→ Verified all patches",
+      "✓ Done. Backed up originals.",
     ],
   },
   {
-    icon: AlertTriangle,
-    title: "Malware Scanner",
-    description: "Detects npm malware including the Shai Hulud campaign and supply chain attacks.",
-    highlight: "16+ Indicators",
+    icon: Lock,
+    title: "Secrets Scanner",
+    description: "Finds API keys, tokens, and credentials. 50+ patterns.",
+    highlight: "50+ Patterns",
     terminalLines: [
-      "$ python src/malware_scanner.py ./app",
-      "🔍 Checking malware indicators...",
-      "→ 16 malware patterns tracked",
-      "→ Scanning project files",
-      "⚠ Shai Hulud campaign detected!",
-      "! File: bun_environment.js",
-      "✓ Quarantine recommended",
+      "$ python src/secrets_scanner.py ./",
+      "🔍 Scanning for secrets...",
+      "→ 50+ detection patterns",
+      "→ AWS keys, tokens, passwords",
+      "⚠ Found: .env.local (3 secrets)",
+      "⚠ Found: config.js (API key)",
+      "✓ Report: secrets_report.json",
+    ],
+  },
+  {
+    icon: FileCode,
+    title: "SBOM Generator",
+    description: "Creates CycloneDX or SPDX bills of materials for compliance.",
+    highlight: "CycloneDX/SPDX",
+    terminalLines: [
+      "$ python src/sbom.py --format cyclonedx",
+      "🔍 Generating SBOM...",
+      "→ Reading package.json",
+      "→ Analyzing dependencies",
+      "→ Format: CycloneDX 1.5",
+      "→ Components: 247 found",
+      "✓ sbom.json created",
     ],
   },
   {
     icon: Github,
-    title: "GitHub Integration",
-    description: "Scan your entire GitHub account without cloning. Private repos and org support included.",
+    title: "GitHub Scanner",
+    description: "Scan your repos via API. No cloning needed.",
     highlight: "No Cloning",
     terminalLines: [
       "$ python src/github_scanner.py username",
       "🔍 Fetching repositories...",
-      "→ Found repositories",
+      "→ Found 12 repos",
       "→ Scanning via GitHub API",
-      "→ project-1: ✓ Clean",
-      "→ project-2: ⚠ Vulnerabilities found",
-      "✓ Scan complete (no cloning)",
-    ],
-  },
-  {
-    icon: Monitor,
-    title: "Beautiful GUI",
-    description: "Dark-themed graphical interface with real-time progress, timer, and multi-scanner tabs.",
-    highlight: "Tkinter GUI",
-    terminalLines: [
-      "$ python src/gui.py",
-      "🔍 Starting Shellockolm GUI...",
-      "→ Dark detective theme loaded",
-      "→ 4 scanner tabs ready",
-      "→ Real-time output streaming",
-      "✓ GUI launched successfully",
-      "✓ Elementary interface!",
+      "→ repo-1: ✓ Clean",
+      "→ repo-2: ⚠ 2 CVEs found",
+      "✓ Complete (no cloning)",
     ],
   },
   {
     icon: Bot,
-    title: "AI Assistant Ready",
-    description: "MCP server integration for Claude Desktop, Cursor, and any MCP-compatible AI assistant.",
+    title: "AI Integration",
+    description: "MCP server for Claude, Cursor, and any AI assistant.",
     highlight: "MCP Server",
     terminalLines: [
       "$ python src/server.py",
       "🔍 Starting MCP server...",
       "→ Protocol: stdio",
-      "✓ Connected to Claude Desktop",
-      "→ Tools: scan, patch, report",
+      "→ Tools: scan, patch, sbom",
+      "✓ Connected to Claude",
       "✓ Ready for AI commands",
-    ],
-  },
-  {
-    icon: Lock,
-    title: "Privacy First",
-    description: "Your code stays local. Never uploads code or paths. All scan results stored locally only.",
-    highlight: "100% Local",
-    terminalLines: [
-      "$ # Privacy features built-in:",
-      "→ No network requests",
-      "→ No telemetry tracking",
-      "→ No code uploads (ever)",
-      "→ All scanning is local-only",
-      "→ JSON reports: ./reports/",
-      "✓ Your code stays private",
-    ],
-  },
-  {
-    icon: Zap,
-    title: "Lightning Fast",
-    description: "Optimized scanning with depth limits and smart exclusions. Seconds, not minutes.",
-    highlight: "10-100x Faster",
-    terminalLines: [
-      "$ time python src/scan.py ~/projects",
-      "🔍 Scanning all projects...",
-      "→ Finding package.json files",
-      "→ Checking all lockfiles",
-      "→ Vulnerabilities detected",
-      "✓ Scan completed",
-      "✓ Time: seconds (not minutes)",
-    ],
-  },
-  {
-    icon: FileCode,
-    title: "Comprehensive Reports",
-    description: "Detailed JSON reports with vulnerability info, affected versions, and remediation steps.",
-    highlight: "JSON Export",
-    terminalLines: [
-      "$ python src/scan.py ~/projects",
-      "🔍 Scanning for vulnerabilities...",
-      "→ Generating JSON report...",
-      "→ CVE IDs, versions, patches",
-      "→ Lockfile analysis results",
-      "→ Framework detection data",
-      "✓ cve_2025_55182_scan_report.json",
     ],
   },
 ];
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="relative py-32 overflow-hidden">
+    <section className="relative py-24 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-dark" />
       <div 
@@ -162,22 +114,17 @@ const FeaturesSection = () => {
 
       <div className="relative z-10 container mx-auto px-6">
         {/* Section header */}
-        <div className="text-center mb-20">
-          <span className="badge-detective mb-6 inline-flex">
-            <Zap className="w-4 h-4" />
-            Capabilities
-          </span>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-gradient-ultramarine">Detective</span> Tools
+        <div className="text-center mb-16">
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
+            <span className="text-gradient-ultramarine">6</span> Core Tools
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to investigate and eliminate security vulnerabilities 
-            in your React and Next.js applications.
+          <p className="text-muted-foreground max-w-lg mx-auto">
+            Everything you need to secure React, Next.js, and Node.js apps.
           </p>
         </div>
 
-        {/* Features grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Features grid - 3x2 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <FlipCard
               key={feature.title}

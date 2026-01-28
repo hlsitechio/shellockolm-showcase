@@ -1,13 +1,13 @@
 const stats = [
-  { value: "Fast", label: "Local Scanning", sublabel: "seconds not minutes" },
-  { value: "100%", label: "Coverage", sublabel: "all lockfiles scanned" },
-  { value: "Auto", label: "Patching", sublabel: "one-click fixes" },
-  { value: "16+", label: "Malware Types", sublabel: "indicators tracked" },
+  { value: "60+", label: "Commands" },
+  { value: "32", label: "CVEs" },
+  { value: "7", label: "Scanners" },
+  { value: "100%", label: "Local" },
 ];
 
 const StatsSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-16 overflow-hidden">
       {/* Background with ultramarine glow effect */}
       <div className="absolute inset-0 bg-navy" />
       <div 
@@ -28,8 +28,7 @@ const StatsSection = () => {
               <div className="stat-number text-gradient-ultramarine mb-2 group-hover:glow-text transition-all">
                 {stat.value}
               </div>
-              <div className="text-foreground font-medium mb-1">{stat.label}</div>
-              <div className="text-sm text-muted-foreground">{stat.sublabel}</div>
+              <div className="text-foreground font-medium">{stat.label}</div>
             </div>
           ))}
         </div>
